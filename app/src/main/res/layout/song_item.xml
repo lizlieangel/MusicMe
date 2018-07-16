@@ -2,19 +2,35 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="@dimen/list_height">
 
     <ImageView
-        android:layout_width=""
-        android:layout_height="" />
-    <TextView
-        android:layout_width=""
-        android:layout_height="" />
-    <TextView
-        android:layout_width=""
-        android:layout_height="" />
+        android:layout_width="@dimen/list_height"
+        android:layout_height="@dimen/list_height"
+        android:id="@+id/song_image"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_height"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/song_image">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/song_title"
+            android:textSize="@dimen/title_size"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/song_artist"
+            android:textSize="@dimen/artist_size"/>
+    </LinearLayout>
     <ImageView
-        android:layout_width=""
-        android:layout_height="" />
+        android:layout_width="@dimen/play_button"
+        android:layout_height="@dimen/play_button"
+        android:id="@+id/play_button"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
 
 </RelativeLayout>
